@@ -1003,7 +1003,8 @@ function  sum_top_height(r) {
       if (ele == null) {
         return 0;
       }
-      height += ele.clientHeight;
+      //height += ele.clientHeight;
+      height += ele.offsetHeight;
     }
     return height + offset;
   }
@@ -1017,7 +1018,8 @@ function   sum_left_width(c) {
       if (ele == null) {
         return 0;
       }
-      width += ele.clientWidth;
+      //width += ele.clientWidth;
+      width += ele.offsetWidth;
     }
     return width + offset;
   }
