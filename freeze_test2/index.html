@@ -1,0 +1,1130 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Wolf-Table</title>
+
+    <style>
+.div1 {
+    width: 800px;
+    height: 500px;
+    overflow: scroll;
+    border: 1px solid #777777;
+}
+.div1 table {
+    border-spacing: 0;
+}
+
+.div1 table th {
+    border-left: none;
+    border-right: 1px solid blue;
+    padding: 5px;
+    width: 80px;
+    min-width: 80px;
+    position: sticky;
+    top: 0;
+    background: #727272;
+    color: #e0e0e0;
+    font-weight: normal;
+}
+.div1 td {
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    padding: 5px;
+    width: 80px;
+    min-width: 80px;
+}
+
+    </style>
+<!--
+    <style>
+.div1 {
+    width: 800px;
+    height: 500px;
+    overflow: scroll;
+    border: 1px solid #777777;
+}
+
+.div1 table {
+    border-spacing: 0;
+}
+
+.div1 table th {
+    border-left: none;
+    /*border-right: 1px solid #bbbbbb;*/
+    border-right: 1px solid blue;
+    padding: 5px;
+    width: 80px;
+    min-width: 80px;
+    position: sticky;
+    top: 0;
+    background: #727272;
+    color: #e0e0e0;
+    font-weight: normal;
+}
+
+
+.div1 table tr:nth-child(2)  {
+    position: -webkit-sticky;
+    position: sticky;
+    background: pink;
+    top: 33px;
+    z-index:100;
+ }
+
+.div1 table tr:nth-child(3)  {
+    position: -webkit-sticky;
+    position: sticky;
+    background: lightgreen;
+    top: 91px;      /* 35 + 1 + 58 = 94 */
+    z-index:100;
+ }
+
+.div1 table tr:nth-child(4)  {
+    position: -webkit-sticky;
+    position: sticky;
+    background: lightblue;
+    top: 149px;      /* 35 + 1 + 58 + 1 + 58 = 153 */
+    z-index:100;
+ }
+
+.div1 td {
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    padding: 5px;
+    width: 80px;
+    min-width: 80px;
+}
+
+.div1 th:nth-child(1),
+.div1 td:nth-child(1) {
+    position: sticky;
+    left: 0;
+    width: 150px;
+    min-width: 150px;
+}
+
+.div1 th:nth-child(2),
+.div1 td:nth-child(2) {
+    position: sticky;
+    left: 161px;
+    width: 100px;
+    min-width: 100px;
+}
+
+
+.div1 th:nth-child(3),
+.div1 td:nth-child(3) {
+    position: sticky;
+    left: 272px;
+    width: 130px;
+    min-width: 130px;
+}
+
+
+.div1 td:nth-child(1),
+.div1 td:nth-child(2),
+.div1 td:nth-child(3) {
+    background: #e0e0e0;
+}
+
+.div1 th:nth-child(1),
+.div1 th:nth-child(2),
+.div1 th:nth-child(3) {
+    z-index: 2;
+}
+
+    </style>
+    -->
+
+  </head>
+  <body>
+<div class="div1">
+    <table id = "test_table">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+            <th>Column 6</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+            <th>Column 6</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+            <th>Column 6</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+            <th>Column 6</th>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+
+
+function  sum_top_height(r) {
+    let height = 0;
+    const offset = 0;
+    for (let i = 0; i < r; i++) {
+      let tdid;
+      if (i == 0) {
+        tdid = "TH_" + String(i) + "_" + "0";
+      } else {
+        tdid = "TD_" + String(i) + "_" + "0";
+      }
+      let ele = table.querySelector("#" + tdid);
+      if (ele == null) {
+        return 0;
+      }
+      height += ele.clientHeight;
+    }
+    return height + offset;
+  }
+
+function   sum_left_width(c) {
+    let width = 0;
+    const offset = 0;
+    for (let i = 0; i < c; i++) {
+      let tdid = "TH_" + "0" + "_" + String(i);
+      let ele = table.querySelector("#" + tdid);
+      if (ele == null) {
+        return 0;
+      }
+      width += ele.clientWidth;
+    }
+    return width + offset;
+  }
+
+
+function  freezeStyle_tr_set(tr, r) {
+    if (isrFreeze) {
+      if (r < freeze_decoded.r) {
+        let tophight = sum_top_height(r);
+        tr.style.position = "sticky";
+        tr.style.top = `${tophight}px`;
+        tr.style.background = "white";
+        tr.style.zIndex = 105;
+      }
+      if (r == freeze_decoded.r - 1) {
+        tr.style.borderBottom = "2px solid green";
+      }
+    } else {
+      tr.style.position = "";
+      tr.style.top = "";
+      tr.style.background = "";
+      tr.style.zIndex = 0;
+      tr.style.borderBottom = "";
+    }
+  }
+
+function  freezeStyle_td_set(td, c, r) {
+    if (isrFreeze) {
+      if (c < freeze_decoded.c) {
+        let leftwidth = sum_left_width(c);
+        td.style.position = "sticky";
+        td.style.left = `${leftwidth}px`;
+        td.style.background = "white";
+        td.style.zIndex = 100;  // old:100
+        if (c == freeze_decoded.c - 1) {
+          td.style.borderRight = "2px solid green";
+        }
+      }
+      if (r == freeze_decoded.r - 1) {
+        td.style.borderBottom = "2px solid green";
+      }
+    } else {
+      td.style.position = "";
+      td.style.left = "";
+      td.style.background = "";
+      td.style.zIndex = 0;
+      td.style.borderRight = "";
+      td.style.borderBottom = "";
+    }
+  }
+
+ function table_freeze() {
+    for (let i = 0; i < table.childNodes.length; i++) {
+      //console.log("ele", table.childNodes[i].nodeName)
+	    
+      if (table.childNodes[i].nodeName == "TR") {
+        let tr = table.childNodes[i];
+        freezeStyle_tr_set(tr, i);
+        for (let j = 0; j < tr.childNodes.length; j++) {
+          if (
+            tr.childNodes[j].nodeName == "TH" ||
+            tr.childNodes[j].nodeName == "TD"
+          ) {
+            freezeStyle_td_set(tr.childNodes[j], j, i);
+          }
+        }
+      }
+	    
+    }
+  }
+
+ function table_setid() {
+    let r = -1;
+    for (let i = 0; i < table.childNodes.length; i++) {
+      if (table.childNodes[i].nodeName == "TR") {
+        r = r + 1;
+        let tr = table.childNodes[i];
+        let c = -1;
+        for (let j = 0; j < tr.childNodes.length; j++) {
+          if (
+            tr.childNodes[j].nodeName == "TH" 
+          ) {
+            c = c + 1;
+            tr.childNodes[j].id = "TH_" + r + "_" + c ;
+          }
+          if (
+            tr.childNodes[j].nodeName == "TD"
+          ) {
+            c = c + 1;
+            tr.childNodes[j].id = "TD_" + r + "_" + c ;
+          }
+        }
+      }
+	    
+    }
+  }
+
+//let freeze_decoded = { c:2, r: 3};
+let freeze_decoded = { c:0, r: 0};
+let isrFreeze = true;
+let table =  document.querySelector("#test_table TBODY" );
+table_setid();
+table_freeze();
+
+</script>
+
+</body>
+</html>
+
+
