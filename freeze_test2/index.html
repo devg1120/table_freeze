@@ -1069,7 +1069,7 @@ function  freezeStyle_td_set(td, c, r) {
     }
   }
 
- function table_freeze() {
+ function table_freeze_old() {
     for (let i = 0; i < table.childNodes.length; i++) {
       //console.log("ele", table.childNodes[i].nodeName)
 	    
@@ -1089,6 +1089,29 @@ function  freezeStyle_td_set(td, c, r) {
     }
   }
 
+ function table_freeze() {
+    let r = -1;
+    for (let i = 0; i < table.childNodes.length; i++) {
+      //console.log("ele", table.childNodes[i].nodeName)
+	    
+      if (table.childNodes[i].nodeName == "TR") {
+        r = r + 1;
+        let tr = table.childNodes[i];
+        freezeStyle_tr_set(tr, r);
+        let c = -1;
+        for (let j = 0; j < tr.childNodes.length; j++) {
+          if (
+            tr.childNodes[j].nodeName == "TH" ||
+            tr.childNodes[j].nodeName == "TD"
+          ) {
+            c = c + 1;
+            freezeStyle_td_set(tr.childNodes[j], c, r);
+          }
+        }
+      }
+	    
+    }
+  }
  function table_setid() {
     let r = -1;
     for (let i = 0; i < table.childNodes.length; i++) {
@@ -1115,8 +1138,8 @@ function  freezeStyle_td_set(td, c, r) {
     }
   }
 
-//let freeze_decoded = { c:2, r: 3};
-let freeze_decoded = { c:0, r: 0};
+let freeze_decoded = { c:2, r: 3};
+//let freeze_decoded = { c:0, r: 0};
 let isrFreeze = true;
 let table =  document.querySelector("#test_table TBODY" );
 table_setid();
